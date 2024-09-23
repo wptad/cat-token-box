@@ -1,6 +1,6 @@
 services:
   postgres:
-    image: postgres:16
+    image: registry.cn-zhangjiakou.aliyuncs.com/zlns/postgres:16
     shm_size: 1g
     restart: always
     environment:
@@ -13,7 +13,8 @@ services:
     volumes:
       - ./docker/pgdata:/var/lib/postgresql/data
   bitcoind:
-    image: fractalbitcoin/fractal:v0.2.1
+    # image: fractalbitcoin/fractal:v0.2.1
+    image: registry.cn-zhangjiakou.aliyuncs.com/zlns/fractal:v0.2.1
     restart: always
     entrypoint: ["bitcoind", "-datadir=/data/", "-maxtipage=504576000"]
     command: ""

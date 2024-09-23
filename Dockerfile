@@ -1,4 +1,4 @@
-FROM node:20
+FROM registry.cn-zhangjiakou.aliyuncs.com/zlns/node AS app
 
 ENV TIME_ZONE=Asia/Shanghai
 ENV TZ=Asia/Shanghai
